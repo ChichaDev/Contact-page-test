@@ -1,0 +1,21 @@
+.legal {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 214px;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+@media (max-width: 425px) {
+  .legal {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 176px;
+    width: 142px;
+    align-items: flex-start;
+    align-content: center;
+    gap: 10px;
+  }
+}

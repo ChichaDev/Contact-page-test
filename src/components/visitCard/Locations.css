@@ -1,0 +1,40 @@
+.contact-locations {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 25px;
+  color: var(--white-color);
+}
+
+.locations-contact {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 425px) {
+  .contact-locations {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    color: var(--white-color);
+  }
+
+  .locations-contact {
+    width: 24px;
+    height: 24px;
+  }
+
+  .contact-locations p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+    color: var(--white-color);
+  }
+}

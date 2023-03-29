@@ -1,0 +1,20 @@
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 214px;
+  align-items: flex-start;
+  gap: 24px;
+}
+
+@media (max-width: 425px) {
+  .quick-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 180px;
+    width: 150px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}

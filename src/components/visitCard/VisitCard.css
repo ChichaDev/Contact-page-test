@@ -1,0 +1,25 @@
+.visit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 337px;
+  height: 196px;
+  margin-left: 40px;
+  margin-top: 70px;
+  color: var(--white-color);
+}
+
+@media (max-width: 425px) {
+  .visit-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 70%;
+    height: 50%;
+    margin-left: 16%;
+    margin-top: 12px;
+    color: var(--white-color);
+  }
+}

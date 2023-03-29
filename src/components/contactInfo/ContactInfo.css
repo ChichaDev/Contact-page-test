@@ -1,0 +1,240 @@
+.container-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 491px;
+  height: 647px;
+  background: #000000;
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-top: 10px;
+  position: relative;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 6px;
+  width: 307px;
+  height: 75px;
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.contact-title {
+  width: 291px;
+  height: 42px;
+}
+
+.contact-title h2 {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  color: var(--white-color);
+  margin-left: -0.3em;
+}
+
+.contact-description {
+  width: 307px;
+  height: 27px;
+}
+
+.contact-description p {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  color: #c9c9c9;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 232px;
+  width: 647px;
+}
+
+.social-network {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 24px;
+  color: var(--white-color);
+  width: 145px;
+  height: 37px;
+  padding: 0.1em;
+  margin-left: 39px;
+  margin-top: 160px;
+}
+
+.twitter .instagram .discord {
+  width: 30px;
+  height: 30px;
+}
+
+.twitter:hover * {
+  cursor: pointer;
+  fill: white;
+  stroke: black;
+}
+
+.instagram:hover * {
+  cursor: pointer;
+}
+
+.discord:hover * {
+  cursor: pointer;
+  fill: white;
+  stroke: black;
+}
+
+.ellipse-two {
+  position: absolute;
+  width: 138px;
+  height: 138px;
+  left: 265px;
+  top: 415px;
+  background: rgba(72, 72, 72, 0.5);
+  border-radius: 50%;
+  opacity: 0.5;
+}
+
+.ellipse {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  left: 271px;
+  top: 427px;
+  background: #1a1a1a;
+  border-radius: 50%;
+  border-radius: 90% 0 5% 0%;
+}
+
+@media (max-width: 425px) {
+  .container-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 97%;
+    height: 397px;
+    background: #000000;
+    border-radius: 5px;
+    margin-left: 1.5%;
+    margin-top: 1.5%;
+    position: relative;
+  }
+
+  .header-info {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    gap: 6px;
+    width: 80%;
+    height: 30%;
+    margin-left: 12%;
+    margin-top: 4%;
+  }
+
+  .contact-title {
+    width: 208px;
+    height: 30px;
+  }
+
+  .contact-title h2 {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white-color);
+    margin-left: -0.3em;
+  }
+
+  .contact-description {
+    width: 198px;
+    height: 17px;
+  }
+
+  .contact-description p {
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    color: #c9c9c9;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    height: 232px;
+    width: 647px;
+  }
+
+  .social-network {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 24px;
+    color: var(--white-color);
+    width: 20%;
+    height: 30px;
+    padding: 0.1em;
+    margin-left: 7%;
+    margin-top: 12%;
+  }
+
+  .twitter .instagram .discord {
+    width: 30px;
+    height: 30px;
+  }
+
+  .twitter:hover * {
+    cursor: pointer;
+    fill: white;
+    stroke: black;
+  }
+
+  .instagram:hover * {
+    cursor: pointer;
+  }
+
+  .discord:hover * {
+    cursor: pointer;
+    fill: white;
+    stroke: black;
+  }
+
+  .ellipse-two {
+    position: absolute;
+    width: 22%;
+    height: 18%;
+    left: 70%;
+    top: 72%;
+    background: rgba(72, 72, 72, 0.5);
+    border-radius: 50%;
+    opacity: 0.5;
+  }
+
+  .ellipse {
+    position: absolute;
+    width: 30%;
+    height: 22%;
+    left: 70%;
+    top: 78%;
+    background: #1a1a1a;
+    border-radius: 50%;
+    border-radius: 90% 0 5% 0%;
+  }
+}

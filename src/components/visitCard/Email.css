@@ -1,0 +1,43 @@
+.contact-email {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 25px;
+}
+
+.contact-email a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.email-address {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 425px) {
+  .contact-email {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .contact-email a {
+    text-decoration: none;
+    color: var(--white-color);
+    font-family: "Poppins";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .email-address {
+    width: 24px;
+    height: 24px;
+  }
+}
