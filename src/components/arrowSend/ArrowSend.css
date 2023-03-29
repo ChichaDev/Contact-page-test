@@ -8,7 +8,7 @@
   transform: rotate(-15.75deg);
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   .arrow-send {
     position: absolute;
     width: 150px;

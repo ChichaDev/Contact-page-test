@@ -16,7 +16,7 @@
   height: 24px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   .contact-email {
     display: flex;
     flex-direction: column;

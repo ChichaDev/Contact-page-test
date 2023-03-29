@@ -12,7 +12,7 @@
   justify-content: space-between;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   .container {
     position: relative;
     width: 80%;

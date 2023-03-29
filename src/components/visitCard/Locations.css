@@ -12,7 +12,7 @@
   height: 24px;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   .contact-locations {
     display: flex;
     flex-direction: column;

@@ -123,7 +123,7 @@ nav .smartphone-menu {
 
 /* Smartphone version */
 
-@media (max-width: 425px) {
+@media (max-width: 575px) {
   nav ul {
     display: none;
   }

@@ -13,22 +13,16 @@
 }
 
 body {
-  max-width: 1440px;
   font-family: "Poppins", sans-serif;
-}
-
-* {
   margin: 0;
 }
-html {
+.wrapper {
   max-width: 1440px;
+  margin: 0 auto;
 }
 
-@media (max-width: 425px) {
-  body {
-    max-width: 425px;
-  }
-  html {
-    max-width: 425px;
+@media (max-width: 575px) {
+  .wrapper {
+    width: 100%;
   }
 }

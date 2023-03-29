@@ -6,7 +6,7 @@ import { Navbar } from "../navbar/Navbar";
 export const Header = () => {
   return (
     <header className="header">
-      <div className="wrapper">
+      <div className="wrapper-header">
         <Navbar />
       </div>
     </header>
