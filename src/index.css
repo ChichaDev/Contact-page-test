@@ -28,4 +28,7 @@ html {
   body {
     max-width: 425px;
   }
+  html {
+    max-width: 425px;
+  }
 }
