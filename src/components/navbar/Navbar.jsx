@@ -1,5 +1,5 @@
 import { ReactComponent as CartLogo } from "../../assets/img/cart.svg";
-import { ReactComponent as ProfileLogo } from "../../assets/img/profile.svg";
+import { ReactComponent as ProfileLogo } from "../../assets/img/profile-mobile.svg";
 // import DownArrow from "../../assets/img/down-arrow.svg";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
@@ -77,10 +77,12 @@ export const Navbar = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
+              fontFamily: "Inter",
+              fontSize: "18px",
+              fontWeight: 800,
+              fontStyle: "normal",
+              lineHeight: "22px",
+              color: "black",
               textDecoration: "none",
             }}
           >
@@ -92,7 +94,8 @@ export const Navbar = () => {
             sx={{
               flexGrow: 1,
               display: { xs: "flex", md: "none" },
-              marginLeft: "170px",
+              marginLeft: "190px",
+              color: "black",
             }}
           >
             <IconButton
@@ -107,6 +110,14 @@ export const Navbar = () => {
             </IconButton>
 
             <Menu
+              PaperProps={{
+                style: {
+                  height: "350px",
+                  width: "150px",
+                  marginLeft: "20px",
+                  marginTop: "4px",
+                },
+              }}
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -121,7 +132,10 @@ export const Navbar = () => {
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "flex", md: "none" },
+                display: {
+                  xs: "flex",
+                  md: "none",
+                },
               }}
             >
               {pages.map((page) => (
@@ -129,6 +143,7 @@ export const Navbar = () => {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+
               <Tooltip title="Profile">
                 <IconButton
                   sx={{
@@ -137,6 +152,7 @@ export const Navbar = () => {
                     borderRadius: "50%",
                     width: "31px",
                     height: "31px",
+                    marginLeft: "20px",
                   }}
                 >
                   <ProfileLogo />
@@ -150,6 +166,7 @@ export const Navbar = () => {
                     borderRadius: "50%",
                     width: "31px",
                     height: "31px",
+                    marginLeft: "20px",
                   }}
                 >
                   <CartLogo />

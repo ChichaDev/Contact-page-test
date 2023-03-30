@@ -178,7 +178,7 @@
     justify-content: space-between;
     flex-direction: row;
     height: 232px;
-    width: 647px;
+    width: 100%;
   }
 
   .social-network {

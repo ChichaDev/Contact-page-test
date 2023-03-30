@@ -8,3 +8,9 @@
   background: url(arrow-send.svg);
   transform: rotate(-15.75deg);
 }
+
+@media (max-width: 720px) {
+  .arrow-send {
+    display: none;
+  }
+}

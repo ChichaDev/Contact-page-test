@@ -19,9 +19,3 @@ body {
 .wrapper {
   margin: 0 auto;
 }
-
-/* @media (max-width: 575px) {
-  .wrapper {
-    width: 100%;
-  }
-} */

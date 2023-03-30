@@ -17,7 +17,7 @@ export const ContactBlock = () => {
 
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container disableGutters={false} maxWidth="lg">
         <Box
           sx={{
             bgcolor: "#f5f5f5",
