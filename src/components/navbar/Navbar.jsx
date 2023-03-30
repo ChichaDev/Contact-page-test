@@ -1,5 +1,8 @@
 import { ReactComponent as CartLogo } from "../../assets/img/cart.svg";
-import { ReactComponent as ProfileLogo } from "../../assets/img/profile-mobile.svg";
+import { ReactComponent as ProfileLogo } from "../../assets/img/profile.svg";
+import { ReactComponent as ProfileMobile } from "../../assets/img/profile-mobile.svg";
+import { ReactComponent as MenuClosed } from "../../assets/img/ci_menu-alt-01.svg";
+import { ReactComponent as MenuOpen } from "../../assets/img/open-menu.svg";
 // import DownArrow from "../../assets/img/down-arrow.svg";
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
@@ -17,24 +20,15 @@ import MenuItem from "@mui/material/MenuItem";
 
 export const Navbar = () => {
   const pages = ["Home", "Features", "Blog", "Shop", "About", "Contact"];
-  const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
-  const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(false);
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -106,7 +100,7 @@ export const Navbar = () => {
               onClick={handleOpenNavMenu}
               color="inherit"
             >
-              <MenuIcon />
+              {anchorElNav ? <MenuOpen /> : <MenuClosed />}
             </IconButton>
 
             <Menu
@@ -116,6 +110,7 @@ export const Navbar = () => {
                   width: "150px",
                   marginLeft: "20px",
                   marginTop: "4px",
+                  position: "fixed",
                 },
               }}
               id="menu-appbar"
@@ -155,7 +150,7 @@ export const Navbar = () => {
                     marginLeft: "20px",
                   }}
                 >
-                  <ProfileLogo />
+                  <ProfileMobile />
                 </IconButton>
               </Tooltip>
               <Tooltip title="Cart">

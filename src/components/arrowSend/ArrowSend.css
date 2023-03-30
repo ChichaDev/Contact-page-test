@@ -11,6 +11,9 @@
 
 @media (max-width: 720px) {
   .arrow-send {
-    display: none;
+    width: 180.79px;
+    height: 134.31px;
+    top: 86%;
+    left: 18%;
   }
 }

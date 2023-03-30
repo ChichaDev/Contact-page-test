@@ -250,7 +250,7 @@ export const Footer = () => {
                       display: "flex",
                       flexDirection: "column",
                       justifyContent: {
-                        xs: "space-between",
+                        xs: "space-evenly",
                         md: "space-between",
                       },
 
@@ -353,7 +353,10 @@ export const Footer = () => {
                       marginLeft: { xs: "10px" },
                       display: "flex",
                       flexDirection: "column",
-                      justifyContent: "space-between",
+                      justifyContent: {
+                        xs: "space-evenly",
+                        md: "space-between",
+                      },
                     }}
                   >
                     <Typography
@@ -456,7 +459,10 @@ export const Footer = () => {
                       marginRight: { xs: "-30px" },
                       display: "flex",
                       flexDirection: "column",
-                      justifyContent: "space-between",
+                      justifyContent: {
+                        xs: "space-evenly",
+                        md: "space-between",
+                      },
                     }}
                   >
                     <Typography
