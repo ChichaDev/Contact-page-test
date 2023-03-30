@@ -4,7 +4,7 @@ nav .wrapper-navigate {
   align-items: center;
   gap: 60px;
   width: 710px;
-  margin-left: 370px;
+  margin-left: 10%;
 }
 
 nav .navigate {
@@ -24,15 +24,13 @@ nav .navigate-icons {
 }
 
 nav {
-  width: 1240px;
+  width: 1024px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 300;
   margin-top: 40px;
   height: 31.54px;
-  margin-right: 100px;
-  margin-left: 100px;
 }
 
 nav ul {
@@ -145,7 +143,16 @@ nav .smartphone-menu {
     line-height: 22px;
     color: #000000;
   }
-
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 300;
+    margin-top: 10px;
+    height: 20px;
+    border: 1px solid black;
+  }
   nav .wrapper-navigate {
     position: absolute;
     width: 100%;
@@ -153,6 +160,16 @@ nav .smartphone-menu {
     left: 0px;
     top: 0px;
     filter: drop-shadow(0px -2px 4px rgba(0, 0, 0, 0.25));
+    border: 1px solid blue;
+  }
+
+  nav .navigate {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    height: 31.54px;
+    border: 1px solid red;
   }
 
   nav .smartphone-menu {

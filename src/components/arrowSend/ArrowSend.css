@@ -2,20 +2,9 @@
   position: absolute;
   width: 280.79px;
   height: 170.31px;
-  left: 810px;
-  top: 505px;
+
+  top: 75%;
+  left: 40%;
   background: url(arrow-send.svg);
   transform: rotate(-15.75deg);
-}
-
-@media (max-width: 575px) {
-  .arrow-send {
-    position: absolute;
-    width: 150px;
-    height: 85px;
-    left: 70px;
-    top: 952px;
-    background: url(letter_send.png);
-    transform: rotate(-16deg);
-  }
 }
