@@ -45,24 +45,28 @@ export const ContactForm = () => {
               label="First Name"
               variant="standard"
               color="black"
+              type="text"
             />
             <TextField
               id="standard-basic"
               label="Last Name"
               variant="standard"
               color="black"
+              type="text"
             />
             <TextField
               id="standard-basic"
               label="Email"
               variant="standard"
               color="black"
+              type="email"
             />
             <TextField
               id="standard-basic"
               label="Phone Number"
               variant="standard"
               color="black"
+              type="number"
             />
           </Box>
 
@@ -106,11 +110,12 @@ export const ContactForm = () => {
               multiline
               fullWidth
               color="black"
+              type="email"
             />
           </Box>
 
           <Box sx={btnContainer}>
-            <Button color="neutral" variant="contained" sx={btn}>
+            <Button color="neutral" variant="contained" sx={btn} type="submit">
               Send Message
             </Button>
           </Box>

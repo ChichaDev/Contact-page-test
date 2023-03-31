@@ -26,6 +26,9 @@ import {
   boxLegalQuick,
 } from "./FooterStyles";
 
+// The footer is implemented according to the classic flex model,
+// division and grouping into blocks,
+// reusable entities that are collected together in one flexible container
 export const Footer = () => {
   return (
     <React.Fragment>

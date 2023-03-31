@@ -33,6 +33,8 @@ import {
   mobileCartAndProfile,
 } from "./NavbarStyles";
 
+// The navigation menu is implemented flexible for all screen sizes
+// Basic logic for drawing a list, state implementation
 export const Navbar = () => {
   const pages = ["Home", "Features", "Blog", "Shop", "About", "Contact"];
 
