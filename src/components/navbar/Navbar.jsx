@@ -1,9 +1,10 @@
 import { ReactComponent as CartLogo } from "../../assets/img/cart.svg";
 import { ReactComponent as ProfileLogo } from "../../assets/img/profile.svg";
-import { ReactComponent as ProfileMobile } from "../../assets/img/profile-mobile.svg";
+// import { ReactComponent as ProfileMobile } from "../../assets/img/profile-mobile.svg";
+import ProfileMob from "../../assets/img/profile-mobile.svg";
 import { ReactComponent as MenuClosed } from "../../assets/img/ci_menu-alt-01.svg";
 import { ReactComponent as MenuOpen } from "../../assets/img/open-menu.svg";
-// import DownArrow from "../../assets/img/down-arrow.svg";
+
 import * as React from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
@@ -17,6 +18,20 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+
+import {
+  appBarStyles,
+  laptopLogo,
+  laptopNavMenu,
+  laptopMenuItem,
+  laptopBoxUser,
+  laptopCartAndProfile,
+  mobileLogo,
+  mobileBurger,
+  burgerMenuProps,
+  mobileMenu,
+  mobileCartAndProfile,
+} from "./NavbarStyles";
 
 export const Navbar = () => {
   const pages = ["Home", "Features", "Blog", "Shop", "About", "Contact"];
@@ -32,12 +47,7 @@ export const Navbar = () => {
   };
 
   return (
-    <AppBar
-      position="static"
-      sx={{
-        backgroundColor: "white",
-      }}
-    >
+    <AppBar position="static" sx={appBarStyles}>
       <Container maxWidth="xl">
         {/* Laptop Logo */}
         <Toolbar disableGutters>
@@ -46,52 +56,46 @@ export const Navbar = () => {
             noWrap
             component="a"
             href="/"
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "Inter",
-              fontStyle: "normal",
-              fontWeight: 800,
-              fontSize: "24px",
-              color: "black",
-              textDecoration: "none",
-              lineHeight: "29px",
-            }}
+            sx={laptopLogo}
           >
             Logo Here
           </Typography>
 
+          {/* Laptop nav menu */}
+          <Box sx={laptopNavMenu}>
+            {pages.map((page) => (
+              <Button
+                key={page}
+                onClick={handleCloseNavMenu}
+                sx={laptopMenuItem}
+              >
+                {page}
+              </Button>
+            ))}
+          </Box>
+
+          {/* Laptop cart and profile */}
+          <Box sx={laptopBoxUser}>
+            <Tooltip title="Profile">
+              <IconButton sx={laptopCartAndProfile}>
+                <ProfileLogo />
+              </IconButton>
+            </Tooltip>
+
+            <Tooltip title="Cart">
+              <IconButton sx={laptopCartAndProfile}>
+                <CartLogo />
+              </IconButton>
+            </Tooltip>
+          </Box>
+
           {/* mobile Logo Here*/}
-          <Typography
-            variant="h5"
-            noWrap
-            component="a"
-            href=""
-            sx={{
-              mr: 2,
-              display: { xs: "flex", md: "none" },
-              flexGrow: 1,
-              fontFamily: "Inter",
-              fontSize: "18px",
-              fontWeight: 800,
-              fontStyle: "normal",
-              lineHeight: "22px",
-              color: "black",
-              textDecoration: "none",
-            }}
-          >
+          <Typography variant="h5" noWrap component="a" href="" sx={mobileLogo}>
             Logo Here
           </Typography>
 
           {/* Mobile burger menu*/}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "flex", md: "none" },
-              marginLeft: "190px",
-              color: "black",
-            }}
-          >
+          <Box sx={mobileBurger}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -104,15 +108,7 @@ export const Navbar = () => {
             </IconButton>
 
             <Menu
-              PaperProps={{
-                style: {
-                  height: "350px",
-                  width: "150px",
-                  marginLeft: "20px",
-                  marginTop: "4px",
-                  position: "fixed",
-                },
-              }}
+              PaperProps={burgerMenuProps}
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
@@ -126,12 +122,7 @@ export const Navbar = () => {
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
-              sx={{
-                display: {
-                  xs: "flex",
-                  md: "none",
-                },
-              }}
+              sx={mobileMenu}
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
@@ -139,102 +130,20 @@ export const Navbar = () => {
                 </MenuItem>
               ))}
 
+              {/* mobile Cart and Profile */}
               <Tooltip title="Profile">
-                <IconButton
-                  sx={{
-                    p: 0,
-                    border: "1px solid black",
-                    borderRadius: "50%",
-                    width: "31px",
-                    height: "31px",
-                    marginLeft: "20px",
-                  }}
-                >
-                  <ProfileMobile />
-                </IconButton>
+                <Avatar
+                  alt="Profile"
+                  src={ProfileMob}
+                  sx={mobileCartAndProfile}
+                />
               </Tooltip>
               <Tooltip title="Cart">
-                <IconButton
-                  sx={{
-                    p: 0,
-                    border: "1px solid black",
-                    borderRadius: "50%",
-                    width: "31px",
-                    height: "31px",
-                    marginLeft: "20px",
-                  }}
-                >
+                <IconButton sx={mobileCartAndProfile}>
                   <CartLogo />
                 </IconButton>
               </Tooltip>
             </Menu>
-          </Box>
-
-          {/* Laptop nav menu */}
-          <Box
-            sx={{
-              flexGrow: 1,
-              display: { xs: "none", md: "flex" },
-              marginLeft: "500px",
-            }}
-          >
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "#1F1F1F",
-                  display: "block",
-                  fontFamily: "Roboto",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: "16px",
-                  lineHeight: "19px",
-                  textTransform: "none",
-                }}
-              >
-                {page}
-              </Button>
-            ))}
-          </Box>
-
-          {/* Laptop cart and profile */}
-          <Box
-            sx={{
-              display: { xs: "none", md: "flex" },
-              gap: "40px",
-              flexGrow: 0,
-              marginRight: "50px",
-            }}
-          >
-            <Tooltip title="Profile">
-              <IconButton
-                sx={{
-                  p: 0,
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "31px",
-                  height: "31px",
-                }}
-              >
-                <ProfileLogo />
-              </IconButton>
-            </Tooltip>
-
-            <Tooltip title="Cart">
-              <IconButton
-                sx={{
-                  p: 0,
-                  border: "1px solid black",
-                  borderRadius: "50%",
-                  width: "31px",
-                  height: "31px",
-                }}
-              >
-                <CartLogo />
-              </IconButton>
-            </Tooltip>
           </Box>
         </Toolbar>
       </Container>

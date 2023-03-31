@@ -16,6 +16,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+    gap: 10px;
     width: 70%;
     height: 50%;
     margin-left: 16%;
